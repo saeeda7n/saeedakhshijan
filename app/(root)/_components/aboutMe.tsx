@@ -14,7 +14,7 @@ export function AboutMe() {
   offset: ["start end", "end start"],
  });
  const x1 = useTransform(scrollYProgress, [0, 0.4], [0, 100]);
- const x = useTransform(scrollYProgress, [0.5, 1], ["0%", "100%"]);
+ const x = useTransform(scrollYProgress, [0.55, 1], ["0%", "100%"]);
  const y = useTransform(scrollYProgress, [0.5, 0.55, 1], ["0%", "10%", "100%"]);
  const clipPath = useMotionTemplate`polygon(0 0, ${x1}% 0, ${x1}% 100%, 0 100%)`;
 
@@ -32,8 +32,9 @@ export function AboutMe() {
     <motion.div
      animate={{ rotate: 360 }}
      transition={{ repeat: Infinity, ease: "linear", duration: 128 }}
-     className="pointer-events-none absolute -bottom-[15vw] end-[max(-14rem,6vw)] size-[max(15rem,30vw)] rounded-[30%] bg-blue-600 opacity-50 blur-3xl md:size-[max(25rem,30vw)]"
+     className="pointer-events-none absolute -bottom-[15vw] end-[max(-14rem,6vw)] z-10 size-[max(15rem,30vw)] rounded-[30%] bg-blue-600 opacity-50 blur-3xl md:size-[max(25rem,30vw)]"
     />
+    <div className="pointer-events-none absolute -end-[max(-20rem,10vw)] bottom-[5vw] h-96 w-[max(15rem,30vw)] bg-indigo-800 opacity-20 blur-3xl md:size-[max(20rem,30vw)]" />
 
     <div className="container relative">
      <h2 className="text-[clamp(2.5rem,10vw,8rem)] font-bold">About me</h2>

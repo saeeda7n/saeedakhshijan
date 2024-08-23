@@ -30,7 +30,7 @@ function CurrentSkill({ name, icon }: CurrentSkillProps) {
  const top = useSpring(0);
  const left = useSpring(0);
 
- const handleMouseMove = (e) => {
+ const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
   const { width, height } = iconRef.current!.getBoundingClientRect();
   const rect = scope.current!.getBoundingClientRect();
 
