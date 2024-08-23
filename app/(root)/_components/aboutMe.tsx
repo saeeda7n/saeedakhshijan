@@ -9,24 +9,26 @@ import {
 
 export function AboutMe() {
  const target = useRef<HTMLDivElement | null>(null);
- const { scrollYProgress } = useScroll({
-  target,
-  offset: ["start end", "end start"],
- });
- const x1 = useTransform(scrollYProgress, [0, 0.4], [0, 100]);
- const x = useTransform(scrollYProgress, [0.55, 1], ["0%", "100%"]);
- const y = useTransform(scrollYProgress, [0.5, 0.55, 1], ["0%", "10%", "100%"]);
- const clipPath = useMotionTemplate`polygon(0 0, ${x1}% 0, ${x1}% 100%, 0 100%)`;
+ // const { scrollYProgress } = useScroll({
+ //  target,
+ //  offset: ["start end", "end start"],
+ // });
+ // const x1 = useTransform(scrollYProgress, [0, 0.4], [0, 100]);
+ // const x = useTransform(scrollYProgress, [0.55, 1], ["0%", "100%"]);
+ // const y = useTransform(scrollYProgress, [0.5, 0.55, 1], ["0%", "10%", "100%"]);
+ // const clipPath = useMotionTemplate`polygon(0 0, ${x1}% 0, ${x1}% 100%, 0 100%)`;
 
  return (
-  <div className="relative z-40 flex min-h-screen" ref={target}>
+  <div className="relative z-40 -mt-[100lvh] flex min-h-[200lvh]" ref={target}>
    <motion.div
-    style={{
-     clipPath,
-     x,
-     y,
-    }}
-    className="sticky top-0 mx-auto flex flex-1 items-center justify-center overflow-hidden bg-zinc-900"
+    style={
+     {
+      // clipPath,
+      // x,
+      // y,
+     }
+    }
+    className="sticky top-0 mx-auto flex h-lvh flex-1 items-center justify-center overflow-hidden bg-zinc-950"
    >
     <div className="pointer-events-none absolute -start-[max(-14rem,6vw)] -top-[15vw] size-[max(15rem,30vw)] rounded-full bg-red-600 opacity-50 blur-3xl md:size-[max(25rem,30vw)]" />
     <motion.div

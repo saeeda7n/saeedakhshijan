@@ -99,7 +99,7 @@ export function Hero() {
    }
   >
    <Background />
-   <section className="container relative z-50 flex min-h-screen flex-col justify-center py-32">
+   <section className="container relative z-50 flex min-h-lvh flex-col justify-center py-32">
     <div
      className="mt-[calc(theme(spacing.6)+1lh)] text-[clamp(1rem,3vw,2rem)]"
      aria-hidden
@@ -138,7 +138,7 @@ function Background() {
     animate={animationControls}
     className="absolute -top-[5vw] start-[10vw] size-[max(25rem,35vw)] origin-bottom rounded-full bg-purple-900 opacity-50 blur-3xl"
    />
-   <div className="absolute -end-24 bottom-12 top-12 w-16 rounded-full bg-[--backgroundColor] blur-3xl transition duration-300" />
+   <div className="absolute rounded-full bg-[--backgroundColor] blur-3xl transition duration-300 max-md:inset-x-5 max-md:-bottom-12 max-md:h-16 md:inset-y-12 md:-end-24 md:w-16" />
   </div>
  );
 }
