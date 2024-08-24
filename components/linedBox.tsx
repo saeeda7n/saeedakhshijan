@@ -76,10 +76,6 @@ function Line({ x, size, vertical, className, rainClassName }: LineProps) {
   const { height } = scope.current!.getBoundingClientRect();
 
   async function animate() {
-   if (Math.random() > 0.6) {
-    await Sleep(generateRandomNumber(2000, 5400));
-    return animate();
-   }
    const top = generateRandomNumber(0, height - 72 / 2);
    animationControls.set({ top, opacity: 1 });
    await animationControls.start(
