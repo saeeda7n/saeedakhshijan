@@ -1,11 +1,7 @@
 "use client";
 import React, { useRef } from "react";
-import {
- motion,
- useMotionTemplate,
- useScroll,
- useTransform,
-} from "framer-motion";
+import { motion } from "framer-motion";
+import { LinedBox } from "@/components/linedBox";
 
 export function AboutMe() {
  const target = useRef<HTMLDivElement | null>(null);
@@ -28,15 +24,20 @@ export function AboutMe() {
       // y,
      }
     }
-    className="sticky top-0 mx-auto flex h-lvh flex-1 items-center justify-center overflow-hidden bg-zinc-950"
+    className="sticky top-0 mx-auto flex h-lvh flex-1 items-center justify-center overflow-hidden bg-white text-gray-800"
    >
-    <div className="pointer-events-none absolute -start-[max(-14rem,6vw)] -top-[15vw] size-[max(15rem,30vw)] rounded-full bg-red-600 opacity-50 blur-3xl md:size-[max(25rem,30vw)]" />
-    <motion.div
-     animate={{ rotate: 360 }}
-     transition={{ repeat: Infinity, ease: "linear", duration: 128 }}
-     className="pointer-events-none absolute -bottom-[15vw] end-[max(-14rem,6vw)] z-10 size-[max(15rem,30vw)] rounded-[30%] bg-blue-600 opacity-50 blur-3xl md:size-[max(25rem,30vw)]"
+    <LinedBox
+     lineClassName="bg-gray-300"
+     className="absolute -bottom-[min(50vh,50vw)] -end-[min(30vh,30vw)] size-[max(100vh,100vw)]"
+     rainClassName="bg-gray-900"
+     spaceSize={44}
     />
-    <div className="pointer-events-none absolute -end-[max(-20rem,10vw)] bottom-[5vw] h-96 w-[max(15rem,30vw)] bg-indigo-800 opacity-20 blur-3xl md:size-[max(20rem,30vw)]" />
+    {/*<motion.div*/}
+    {/* animate={{ rotate: 360 }}*/}
+    {/* transition={{ repeat: Infinity, ease: "linear", duration: 128 }}*/}
+    {/* className="pointer-events-none absolute -bottom-[15vw] end-[max(-14rem,6vw)] z-10 size-[max(15rem,30vw)] rounded-[30%] bg-blue-600 opacity-50 blur-3xl md:size-[max(25rem,30vw)]"*/}
+    {/*/>*/}
+    {/*<div className="pointer-events-none absolute -end-[max(-20rem,10vw)] bottom-[5vw] h-96 w-[max(15rem,30vw)] bg-indigo-800 opacity-20 blur-3xl md:size-[max(20rem,30vw)]" />*/}
 
     <div className="container relative">
      <h2 className="text-[clamp(2.5rem,10vw,8rem)] font-bold">About me</h2>

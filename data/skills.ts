@@ -40,3 +40,28 @@ export const SKILLS: SkillsProps[] = [
 ];
 
 export const SOFT_SKILLS = [];
+
+export const KEY_WORDS = [
+ "useEffect()",
+ "useState()",
+ "useRef()",
+ "useRouter()",
+ "onClick",
+ "onMouseMove",
+ "transition",
+ "useScroll()",
+ "useSpring()",
+ "useVelocity()",
+ "props",
+ "components",
+ "state",
+ "state less",
+ "event",
+ "useId()",
+ "tailwind css",
+ "react js",
+ "next js",
+ "typescript",
+ "javascript",
+ "pwa",
+];

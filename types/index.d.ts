@@ -12,3 +12,10 @@ declare type SoftSkills = {
  backgroundColor: string;
  textColor: string;
 };
+
+declare type CodeBoxProps = {
+ onComplete: (id: string) => void;
+ top: number;
+ left: number;
+ id: string;
+} & React.PropsWithChildren;
