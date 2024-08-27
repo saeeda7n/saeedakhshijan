@@ -2,6 +2,7 @@ import React from "react";
 import { Hero } from "@/app/(root)/_components/hero";
 import { AboutMe } from "@/app/(root)/_components/aboutMe";
 import { Skills } from "@/app/(root)/_components/skills";
+import { SoftSkills } from "@/app/(root)/_components/softSkills";
 
 export default function Home() {
  return (
@@ -9,6 +10,7 @@ export default function Home() {
    <Hero />
    <AboutMe />
    <Skills />
+   <SoftSkills />
   </main>
  );
 }

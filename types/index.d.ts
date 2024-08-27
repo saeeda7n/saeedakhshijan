@@ -5,6 +5,7 @@ declare type SkillsProps = {
  textColor: string;
  icon?: string;
  miniIcon?: string;
+ animation?: any;
 };
 
 declare type SoftSkills = {

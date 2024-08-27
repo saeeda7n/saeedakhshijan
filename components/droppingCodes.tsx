@@ -1,13 +1,16 @@
 "use client";
 import React, { PropsWithChildren, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { calculateDistance, generateRandomNumber } from "@/lib/utils";
+import { calculateDistance, cn, generateRandomNumber } from "@/lib/utils";
 import { KEY_WORDS } from "@/data/skills";
 
 const DISTANCE_THRESHOLD_MAX = 260;
 const DISTANCE_THRESHOLD_MIN = 110;
 
-export function DroppingCodes({ children }: PropsWithChildren) {
+export function DroppingCodes({
+ children,
+ className,
+}: PropsWithChildren & { className?: string }) {
  const scope = useRef<HTMLDivElement | null>(null);
  const [codes, setCodes] = useState<Omit<CodeBoxProps, "onComplete">[]>([]);
  const previous = useRef({ x: 0, y: 0 });
@@ -19,14 +22,14 @@ export function DroppingCodes({ children }: PropsWithChildren) {
  useEffect(() => {
   if (!scope.current) return;
 
-  function handleMouseMove(e: MouseEvent) {
+  function handleMouseEvent(e: MouseEvent) {
    const { y, x } = previous.current;
    if (
     calculateDistance(x, y, e.pageX, e.pageY) >
      generateRandomNumber(DISTANCE_THRESHOLD_MIN, DISTANCE_THRESHOLD_MAX) ||
     e.type === "click"
    ) {
-    const id = Math.random().toString(32) + Math.random().toString(36);
+    const id = crypto.randomUUID();
     previous.current = { x: e.pageX, y: e.pageY };
     const newBox = {
      id,
@@ -37,17 +40,18 @@ export function DroppingCodes({ children }: PropsWithChildren) {
     setCodes((p) => [...p, newBox]);
    }
   }
-
-  scope.current!.addEventListener("mousemove", handleMouseMove);
-  scope.current!.addEventListener("click", handleMouseMove);
+  if (!scope.current) return;
+  scope.current!.addEventListener("mousemove", handleMouseEvent);
+  scope.current!.addEventListener("click", handleMouseEvent);
   return () => {
-   scope.current!.removeEventListener("mousemove", handleMouseMove);
-   scope.current!.removeEventListener("click", handleMouseMove);
+   if (!scope.current) return;
+   scope.current!.removeEventListener("mousemove", handleMouseEvent);
+   scope.current!.removeEventListener("click", handleMouseEvent);
   };
  }, [scope.current]);
 
  return (
-  <div ref={scope}>
+  <div ref={scope} className={cn(className)}>
    {children}
    {codes.map((box) => (
     <CodeBox

@@ -1,17 +1,29 @@
-import { blue, gray, green, sky, yellow } from "tailwindcss/colors";
+import { blue, gray, green, red, sky, yellow } from "tailwindcss/colors";
 
 export const SKILLS: SkillsProps[] = [
+ {
+  name: "Html",
+  backgroundColor: red["500"],
+  textColor: gray["50"],
+  miniIcon: "/icons/html.svg",
+ },
+ {
+  name: "Css",
+  backgroundColor: blue["500"],
+  textColor: gray["50"],
+  miniIcon: "/icons/css.svg",
+ },
  {
   name: "JavaScript",
   backgroundColor: yellow["500"],
   textColor: gray["950"],
-  miniIcon: "/icons/devicon--javascript.svg",
+  miniIcon: "/icons/js.svg",
  },
  {
   name: "TypeScript",
   backgroundColor: blue["700"],
   textColor: gray["100"],
-  miniIcon: "/icons/devicon--typescript.svg",
+  miniIcon: "/icons/typescript.svg",
  },
  {
   name: "ReactJs",
@@ -26,20 +38,36 @@ export const SKILLS: SkillsProps[] = [
   miniIcon: "/icons/devicon--nextjs.svg",
  },
  {
-  name: "PWA",
-  backgroundColor: green["400"],
-  textColor: gray["950"],
-  miniIcon: "/icons/logos--pwa.svg",
- },
- {
   name: "TailwindCss",
   backgroundColor: sky["500"],
   textColor: gray["200"],
   miniIcon: "/icons/devicon--tailwindcss.svg",
  },
+ {
+  name: "PWA",
+  backgroundColor: green["500"],
+  textColor: gray["50"],
+  miniIcon: "/icons/logos--pwa.svg",
+ },
 ];
 
-export const SOFT_SKILLS = [];
+export const SOFT_SKILLS = [
+ "Rest API",
+ "PWA",
+ "Bootstrap",
+ "Responsive UI",
+ "Git",
+ "GitFlow",
+ "Socket IO",
+ "jQuery",
+ "SSR/SSG/CSR",
+ "Redux",
+ "Zustand",
+ "React Context",
+ "Next Auth",
+ "THREE.js",
+ "React Fiber",
+];
 
 export const KEY_WORDS = [
  "useEffect()",

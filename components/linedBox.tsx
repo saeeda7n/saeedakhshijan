@@ -95,7 +95,7 @@ function Line({ x, size, vertical, className, rainClassName }: LineProps) {
   <div
    ref={scope}
    className={cn(
-    "absolute flex justify-center bg-indigo-800",
+    "absolute flex justify-center",
     vertical ? "inset-y-0" : "inset-x-0",
     className,
    )}
@@ -108,7 +108,7 @@ function Line({ x, size, vertical, className, rainClassName }: LineProps) {
     <motion.div
      animate={animationControls}
      className={cn(
-      "absolute rounded-b-full bg-red-600 [mask-image:linear-gradient(0deg,rgba(0,0,0,1)0%,rgba(0,0,0,0)100%)]",
+      "absolute z-10 rounded-b-full bg-red-600 [mask-image:linear-gradient(0deg,rgba(0,0,0,1)0%,rgba(0,0,0,0)100%)]",
       rainClassName,
      )}
      style={{

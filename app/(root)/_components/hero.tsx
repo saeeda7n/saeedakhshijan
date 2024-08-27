@@ -55,7 +55,7 @@ function CurrentSkill({ name, icon }: CurrentSkillProps) {
      top,
     }}
     variants={variants}
-    className="pointer-events-none absolute z-10 size-10 overflow-hidden rounded-full bg-[--textColor]"
+    className="pointer-events-none absolute z-10 size-10 overflow-hidden rounded-full bg-[--textColor] p-2"
    >
     <img
      className="size-full object-contain object-center"
@@ -112,7 +112,7 @@ export function Hero() {
     <div className="mt-6 inline-flex items-center gap-2 self-start text-[clamp(0.5rem,3vw,2rem)] font-semibold text-gray-200">
      You want to develop a
      <CurrentSkill name={name} icon={miniIcon} />
-     app 🤔?
+     project 🤔?
     </div>
    </section>
   </div>
