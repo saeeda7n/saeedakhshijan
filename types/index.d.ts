@@ -3,9 +3,10 @@ declare type SkillsProps = {
  name: string;
  backgroundColor: string;
  textColor: string;
- icon?: string;
  miniIcon?: string;
- animation?: any;
+ data: {
+  percent: number;
+ };
 };
 
 declare type SoftSkills = {

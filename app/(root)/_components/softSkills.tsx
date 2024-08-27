@@ -8,8 +8,11 @@ export function SoftSkills() {
  return (
   <div className="relative flex h-lvh w-screen items-center overflow-hidden bg-gray-50 py-16 text-gray-800">
    <Background />
-   <div className="container relative z-20 flex flex-col items-center">
-    <h2 className="text-[clamp(2.5rem,10vw,8rem)] font-bold">Soft Skills</h2>
+   <div className="container relative z-20 flex flex-col items-center gap-5">
+    <div className="text-center">
+     <h2 className="text-[clamp(2.5rem,10vw,8rem)] font-bold">Soft Skills</h2>
+     <p className="text-2xl font-bold sm:-mt-5">React ecosystem / Tools</p>
+    </div>
     <ul className="grid grid-cols-2 gap-2 font-medium text-gray-50 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
      {SOFT_SKILLS.map((skill) => (
       <li
@@ -27,10 +30,10 @@ export function SoftSkills() {
 
 function Background() {
  const { width, height } = useWindowSize(1920, 1080);
- const [lines, setLines] = useState(1);
+ const [lines, setLines] = useState(0);
 
  useEffect(() => {
-  setLines(~~((Math.max(width, height) * 1.3) / 64));
+  setLines(Math.round((Math.max(width, height) * 1.3) / 64));
  }, [width, height]);
  return (
   <div className="absolute inset-0 flex -rotate-[9deg] select-none items-center">
@@ -43,7 +46,7 @@ function Background() {
 
 function RenderLine({ index, center }: any) {
  const idx = center > index ? index : index - center;
- const y = center > index ? index * 62 : (index - center) * -62;
+ const y = center > index ? idx * 62 : idx * -62;
  const opacity = 1 - idx / 12;
  const duration = 32 - idx * 1.1;
  return (
