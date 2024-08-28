@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
- scrollbar-width: thin;
+ scrollbar-width: none;
 
 }
 
@@ -72,4 +72,15 @@
     body {
         @apply bg-background text-foreground;
     }
+}
+
+
+.test {
+    clip-path: polygon(12rem 0, 12rem 8.25rem, 18.5rem 8.25rem, 18.5rem 24.9rem, 25rem 24.9rem, 100% 100%, 0% 100%, 0 100%, 0 0);
+
+}
+
+.projects {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 12rem 100%, 12rem 19.35rem, 0% 19.35rem);
+
 }

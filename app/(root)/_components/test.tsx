@@ -16,52 +16,46 @@ export function Component({ skill }: any) {
   { name: "skill", visitors: skill.data.percent, fill: skill.backgroundColor },
  ];
  const chartConfig = {
-  safari: {
-   label: "Skill",
-   color: skill.backgroundColor,
+  desktop: {
+   label: "Desktop",
+   color: "hsl(var(--chart-1))",
+  },
+  mobile: {
+   label: "Mobile",
+   color: "hsl(var(--chart-2))",
   },
  } satisfies ChartConfig;
-
+ const totalVisitors = 11;
  return (
-  <ChartContainer config={chartConfig} className="mx-auto aspect-square w-full">
+  <ChartContainer
+   config={chartConfig}
+   className="mx-auto aspect-square w-full max-w-[250px]"
+  >
    <RadialBarChart
     data={chartData}
-    endAngle={(skill.data.percent / 100) * 360}
+    endAngle={180}
     innerRadius={80}
-    outerRadius={140}
+    outerRadius={130}
    >
-    <PolarGrid
-     gridType="circle"
-     radialLines={false}
-     stroke="none"
-     className="first:fill-muted last:fill-background"
-     polarRadius={[86, 74]}
-    />
-    <RadialBar dataKey="visitors" background />
     <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
      <Label
       content={({ viewBox }) => {
        if (viewBox && "cx" in viewBox && "cy" in viewBox) {
         return (
-         <text
-          x={viewBox.cx}
-          y={viewBox.cy}
-          textAnchor="middle"
-          dominantBaseline="middle"
-         >
+         <text x={viewBox.cx} y={viewBox.cy} textAnchor="middle">
           <tspan
            x={viewBox.cx}
-           y={viewBox.cy}
-           className="fill-foreground text-4xl font-bold"
+           y={(viewBox.cy || 0) - 16}
+           className="fill-foreground text-2xl font-bold"
           >
-           {chartData[0].visitors.toLocaleString()}%
+           asd
           </tspan>
           <tspan
            x={viewBox.cx}
-           y={(viewBox.cy || 0) + 24}
+           y={(viewBox.cy || 0) + 4}
            className="fill-muted-foreground"
           >
-           {skill.name}
+           Visitors
           </tspan>
          </text>
         );
@@ -69,6 +63,20 @@ export function Component({ skill }: any) {
       }}
      />
     </PolarRadiusAxis>
+    <RadialBar
+     dataKey="desktop"
+     stackId="a"
+     cornerRadius={5}
+     fill="var(--color-desktop)"
+     className="stroke-transparent stroke-2"
+    />
+    <RadialBar
+     dataKey="mobile"
+     fill="var(--color-mobile)"
+     stackId="a"
+     cornerRadius={5}
+     className="stroke-transparent stroke-2"
+    />
    </RadialBarChart>
   </ChartContainer>
  );

@@ -48,7 +48,7 @@ function RenderLine({ index, center }: any) {
  const idx = center > index ? index : index - center;
  const y = center > index ? idx * 62 : idx * -62;
  const opacity = 1 - idx / 12;
- const duration = 32 - idx * 1.1;
+ const duration = 45 - idx * 1.1;
  return (
   <motion.div
    style={{ y, opacity }}

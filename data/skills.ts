@@ -7,7 +7,7 @@ export const SKILLS: SkillsProps[] = [
   textColor: gray["50"],
   miniIcon: "/icons/html.svg",
   data: {
-   percent: 98,
+   percent: 95,
   },
  },
  {
@@ -16,7 +16,7 @@ export const SKILLS: SkillsProps[] = [
   textColor: gray["50"],
   miniIcon: "/icons/css.svg",
   data: {
-   percent: 95,
+   percent: 90,
   },
  },
  {
@@ -25,7 +25,7 @@ export const SKILLS: SkillsProps[] = [
   textColor: gray["950"],
   miniIcon: "/icons/js.svg",
   data: {
-   percent: 90,
+   percent: 85,
   },
  },
  {
@@ -34,7 +34,7 @@ export const SKILLS: SkillsProps[] = [
   textColor: gray["100"],
   miniIcon: "/icons/typescript.svg",
   data: {
-   percent: 85,
+   percent: 80,
   },
  },
  {
@@ -43,7 +43,7 @@ export const SKILLS: SkillsProps[] = [
   textColor: gray["950"],
   miniIcon: "/icons/devicon--react.svg",
   data: {
-   percent: 80,
+   percent: 79,
   },
  },
  {
@@ -52,7 +52,7 @@ export const SKILLS: SkillsProps[] = [
   textColor: gray["950"],
   miniIcon: "/icons/devicon--nextjs.svg",
   data: {
-   percent: 78,
+   percent: 75,
   },
  },
  {
@@ -61,7 +61,7 @@ export const SKILLS: SkillsProps[] = [
   textColor: gray["200"],
   miniIcon: "/icons/devicon--tailwindcss.svg",
   data: {
-   percent: 90,
+   percent: 92,
   },
  },
  {
@@ -70,7 +70,7 @@ export const SKILLS: SkillsProps[] = [
   textColor: gray["50"],
   miniIcon: "/icons/logos--pwa.svg",
   data: {
-   percent: 70,
+   percent: 67,
   },
  },
 ];
@@ -86,6 +86,8 @@ export const SOFT_SKILLS = [
  "Zustand",
  "React Context",
  "Next Auth",
+ "Framer Motion",
+ "GSAP",
  "THREE.js",
  "React Fiber",
  "Responsive UI",

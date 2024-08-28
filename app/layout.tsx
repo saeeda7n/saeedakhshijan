@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import Lenis from "@/app/(root)/lenis";
+import Lenis from "@/app/lenis";
 
 const lexend = Lexend({ subsets: ["latin"], variable: "--lexend-font" });
 
@@ -17,7 +17,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
    <body
     className={cn(
      lexend.variable,
-     "font-lexend dark w-screen overflow-x-hidden",
+     "dark w-screen overflow-x-hidden font-lexend",
     )}
    >
     <Lenis>{children}</Lenis>

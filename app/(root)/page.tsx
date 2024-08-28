@@ -11,6 +11,7 @@ export default function Home() {
    <AboutMe />
    <Skills />
    <SoftSkills />
+   <Hero />
   </main>
  );
 }
