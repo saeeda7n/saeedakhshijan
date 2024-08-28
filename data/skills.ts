@@ -94,7 +94,6 @@ export const SOFT_SKILLS = [
  "Git",
  "GitFlow",
  "Bootstrap",
- "PWA",
 ];
 
 export const KEY_WORDS = [
