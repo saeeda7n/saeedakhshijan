@@ -6,7 +6,7 @@ import { useWindowSize } from "react-use";
 
 export function SoftSkills() {
  return (
-  <div className="relative flex h-lvh w-screen items-center overflow-hidden bg-gray-50 py-16 text-gray-800">
+  <div className="relative flex min-h-lvh w-screen items-center overflow-hidden bg-gray-50 py-16 text-gray-800">
    <Background />
    <div className="container relative z-20 flex flex-col items-center gap-5">
     <div className="text-center">
