@@ -6,9 +6,7 @@ type MockupProps = {
 };
 
 export function LaptopMockup({ src, ...props }: MockupProps) {
- const [id] =
-  useMemo(() => crypto.randomUUID(), []) +
-  Math.random().toString(32).replace("0.", "");
+ const id = useMemo(() => crypto.randomUUID(), []);
  return (
   <svg
    data-name="Macbook"

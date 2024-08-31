@@ -1,10 +1,7 @@
 import React, { useMemo } from "react";
 
 export function IPhoneXMockup({ src, ...props }: any) {
- const id = useMemo(
-  () => crypto.randomUUID() + Math.random().toString(32).replace("0.", ""),
-  [],
- );
+ const id = useMemo(() => crypto.randomUUID(), []);
  return (
   <svg
    data-name="iPhone X"
