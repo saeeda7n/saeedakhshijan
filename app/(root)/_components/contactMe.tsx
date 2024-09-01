@@ -112,7 +112,7 @@ export function ContactMe() {
     <div className="flex-1">
      <MessageForm />
     </div>
-    <div className="flex flex-1 items-center gap-5 self-end">
+    <div className="flex flex-1 flex-wrap items-center gap-5 gap-y-0 self-end">
      <a href="tel:+989303929013" className="flex items-center gap-1">
       <Phone className="-mb-0.5" />
       <span>+98 930 392 9013</span>
