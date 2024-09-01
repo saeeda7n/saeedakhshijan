@@ -3,6 +3,7 @@ import { Lexend } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Lenis from "@/app/lenis";
+import { Toaster } from "@/components/ui/sonner";
 
 const lexend = Lexend({ subsets: ["latin"], variable: "--lexend-font" });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     )}
    >
     <Lenis>{children}</Lenis>
+    <Toaster />
    </body>
   </html>
  );

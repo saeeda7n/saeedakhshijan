@@ -1,6 +1,6 @@
 "use client";
 import { SOFT_SKILLS } from "@/data/skills";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useWindowSize } from "react-use";
 

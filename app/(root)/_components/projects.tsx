@@ -3,7 +3,7 @@ import { LaptopMockup } from "@/components/laptopMockup";
 import { IPhoneXMockup } from "@/components/IPhoneXMockup";
 import { ExternalLink, Github } from "lucide-react";
 import { PROJECTS } from "@/data/projects";
-import { ProjectContainer } from "@/app/(root)/projectContainer";
+import { ProjectContainer } from "@/app/(root)/_components/projectContainer";
 
 const linksMeta = {
  GIT: {

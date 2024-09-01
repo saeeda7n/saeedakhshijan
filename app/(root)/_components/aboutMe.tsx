@@ -1,20 +1,10 @@
-"use client";
-import React, { useRef } from "react";
+import React from "react";
 import { LinedBox } from "@/components/linedBox";
-import { motion, useScroll } from "framer-motion";
 
 export function AboutMe() {
- const target = useRef<HTMLDivElement | null>(null);
- const { scrollYProgress } = useScroll({
-  target,
- });
-
  return (
-  <div
-   className="relative z-40 -mt-[100lvh] min-h-[220lvh] selection:bg-zinc-900 selection:text-gray-50"
-   ref={target}
-  >
-   <motion.div className="sticky top-0 mx-auto flex min-h-lvh items-center justify-center overflow-hidden bg-white">
+  <div className="relative z-40 -mt-[100lvh] min-h-[220lvh] selection:bg-zinc-900 selection:text-gray-50">
+   <div className="sticky top-0 mx-auto flex min-h-lvh items-center justify-center overflow-hidden bg-white">
     <LinedBox
      lineClassName="bg-gray-200"
      className="absolute -bottom-[min(50vh,50vw)] -end-[min(30vh,30vw)] size-[max(100vh,100vw)]"
@@ -29,16 +19,15 @@ export function AboutMe() {
       About me
      </h2>
      <p className="max-w-6xl text-sm text-gray-600 sm:text-base lg:text-lg">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi
-      architecto cumque delectus expedita in itaque quia sequi similique
-      suscipit. Ab, delectus distinctio ea iusto nam nihil quidem quo vel! Lorem
-      ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores
-      autem eum hic libero nisi repellendus saepe totam voluptatem voluptatibus!
-      Aliquid consectetur debitis labore laboriosam nam possimus quo repudiandae
-      unde!
+      Dedicated Front-end Developer with 1+ years of experience building
+      scalable and user-friendly web applications. Proficient in React,
+      JavaScript, and CSS, with a strong understanding of responsive design
+      principles. Passionate about creating intuitive and visually appealing
+      user interfaces. Seeking a challenging role to contribute my skills and
+      drive innovation in a fast-paced environment.
      </p>
     </div>
-   </motion.div>
+   </div>
   </div>
  );
 }
