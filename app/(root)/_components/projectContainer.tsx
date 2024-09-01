@@ -17,7 +17,7 @@ export function ProjectContainer({
   ["0%", "0%", `${100 / len - 100}%`],
  );
  return (
-  <div ref={target} style={{ minHeight: `${len * 100 + 220}vh` }}>
+  <section ref={target} style={{ minHeight: `${len * 100 + 220}vh` }}>
    <h2 className="my-16 text-center text-[clamp(2.5rem,10vw,8rem)] font-bold">
     Projects I'v Done
    </h2>
@@ -26,6 +26,6 @@ export function ProjectContainer({
      {children}
     </motion.div>
    </div>
-  </div>
+  </section>
  );
 }

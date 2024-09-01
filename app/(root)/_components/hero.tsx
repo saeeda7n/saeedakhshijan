@@ -89,7 +89,7 @@ export function Hero() {
  }, [index]);
 
  return (
-  <div
+  <section
    className="relative z-50 bg-black selection:bg-zinc-900 selection:text-gray-100"
    style={
     {
@@ -99,7 +99,7 @@ export function Hero() {
    }
   >
    <Background />
-   <section className="container relative z-50 flex min-h-screen flex-col justify-center py-32">
+   <div className="container relative z-50 flex min-h-svh flex-col justify-center py-32">
     <div
      className="mt-[calc(theme(spacing.6)+1lh)] text-[clamp(1rem,3vw,2rem)]"
      aria-hidden
@@ -114,8 +114,8 @@ export function Hero() {
      <CurrentSkill name={name} icon={miniIcon} />
      project 🤔?
     </div>
-   </section>
-  </div>
+   </div>
+  </section>
  );
 }
 

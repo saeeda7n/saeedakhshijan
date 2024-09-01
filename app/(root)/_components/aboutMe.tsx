@@ -3,7 +3,7 @@ import { LinedBox } from "@/components/linedBox";
 
 export function AboutMe() {
  return (
-  <div className="relative z-40 -mt-[100vh] min-h-[220vh] selection:bg-zinc-900 selection:text-gray-50">
+  <section className="relative z-40 -mt-[100vh] min-h-[220vh] selection:bg-zinc-900 selection:text-gray-50">
    <div className="sticky top-0 mx-auto flex min-h-screen items-center justify-center overflow-hidden bg-white">
     <LinedBox
      lineClassName="bg-gray-200"
@@ -28,6 +28,6 @@ export function AboutMe() {
      </p>
     </div>
    </div>
-  </div>
+  </section>
  );
 }
