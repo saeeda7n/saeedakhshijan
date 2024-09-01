@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 :root {
- /*scrollbar-width: none;*/
-
+ scrollbar-width: none;
 }
 
 @layer base {
