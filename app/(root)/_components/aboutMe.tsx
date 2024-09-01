@@ -3,8 +3,8 @@ import { LinedBox } from "@/components/linedBox";
 
 export function AboutMe() {
  return (
-  <div className="relative z-40 -mt-[100lvh] min-h-[220lvh] selection:bg-zinc-900 selection:text-gray-50">
-   <div className="sticky top-0 mx-auto flex min-h-lvh items-center justify-center overflow-hidden bg-white">
+  <div className="relative z-40 -mt-[100vh] min-h-[220vh] selection:bg-zinc-900 selection:text-gray-50">
+   <div className="sticky top-0 mx-auto flex min-h-screen items-center justify-center overflow-hidden bg-white">
     <LinedBox
      lineClassName="bg-gray-200"
      className="absolute -bottom-[min(50vh,50vw)] -end-[min(30vh,30vw)] size-[max(100vh,100vw)]"

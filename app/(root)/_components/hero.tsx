@@ -99,7 +99,7 @@ export function Hero() {
    }
   >
    <Background />
-   <section className="container relative z-50 flex min-h-lvh flex-col justify-center py-32">
+   <section className="container relative z-50 flex min-h-screen flex-col justify-center py-32">
     <div
      className="mt-[calc(theme(spacing.6)+1lh)] text-[clamp(1rem,3vw,2rem)]"
      aria-hidden

@@ -21,7 +21,7 @@ export function ProjectContainer({
    <h2 className="my-16 text-center text-[clamp(2.5rem,10vw,8rem)] font-bold">
     Projects I'v Done
    </h2>
-   <div className="sticky top-0 flex min-h-lvh w-screen items-center overflow-hidden">
+   <div className="sticky top-0 flex min-h-screen w-screen items-center overflow-hidden">
     <motion.div style={{ x }} className="flex">
      {children}
     </motion.div>

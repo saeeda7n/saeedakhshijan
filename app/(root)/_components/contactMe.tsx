@@ -104,7 +104,7 @@ function MessageForm() {
 
 export function ContactMe() {
  return (
-  <div className="flex min-h-lvh py-32">
+  <div className="flex min-h-screen py-32">
    <div className="container flex min-h-16 flex-col justify-center gap-8">
     <h2 className="my-16 text-[clamp(2.5rem,10vw,8rem)] font-bold">
      Get In Touch
