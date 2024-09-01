@@ -23,7 +23,9 @@ const messageSchema = z.object({
 function MessageForm() {
  const [loading, setLoading] = useState(false);
 
- const { register, handleSubmit, formState, reset } = useForm({
+ const { register, handleSubmit, formState, reset } = useForm<
+  z.infer<typeof messageSchema>
+ >({
   resolver: zodResolver(messageSchema),
  });
 
@@ -54,8 +56,8 @@ function MessageForm() {
       className="w-full bg-transparent px-3 py-3"
      />
     </div>
-    {formState.errors["name"] && (
-     <p className="text-sm text-red-400">{formState.errors["name"]?.message}</p>
+    {formState.errors?.name && (
+     <p className="text-sm text-red-400">{formState.errors?.name?.message}</p>
     )}
    </div>
 
@@ -68,10 +70,8 @@ function MessageForm() {
       className="w-full bg-transparent px-3 py-3"
      />
     </div>
-    {formState.errors["email"] && (
-     <p className="text-sm text-red-400">
-      {formState.errors["email"]?.message}
-     </p>
+    {formState.errors?.email && (
+     <p className="text-sm text-red-400">{formState.errors?.email?.message}</p>
     )}
    </div>
 
@@ -83,9 +83,9 @@ function MessageForm() {
       className="w-full resize-none bg-transparent px-3 py-3"
      />
     </div>
-    {formState.errors["message"] && (
+    {formState.errors?.message && (
      <p className="text-sm text-red-400">
-      {formState.errors["message"]?.message}
+      {formState.errors?.message?.message}
      </p>
     )}
    </div>
