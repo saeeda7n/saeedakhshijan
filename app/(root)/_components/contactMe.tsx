@@ -113,22 +113,35 @@ export function ContactMe() {
      <MessageForm />
     </div>
     <div className="flex flex-1 flex-wrap items-center gap-5 gap-y-3 self-end">
-     <a href="tel:+989303929013" className="flex items-center gap-1">
+     <a
+      target="_blank"
+      href="tel:+989303929013"
+      className="flex items-center gap-1"
+     >
       <Phone className="-mb-0.5" />
       <span>+98 930 392 9013</span>
      </a>
-     <a href="mailto:sakhshijan@gmail.com" className="flex items-center gap-1">
+     <a
+      target="_blank"
+      href="mailto:sakhshijan@gmail.com"
+      className="flex items-center gap-1"
+     >
       <AtSignIcon />
       <span>sakhshijan@gmail.com</span>
      </a>
      <a
+      target="_blank"
       href="https://www.instagram.com/76_saeed_a"
       className="flex items-center gap-1"
      >
       <Instagram />
       <span>76_saeed_a</span>
      </a>
-     <a href="https://github.com/saeeda7n/" className="flex items-center gap-1">
+     <a
+      target="_blank"
+      href="https://github.com/saeeda7n/"
+      className="flex items-center gap-1"
+     >
       <Github />
       <span>git/saeeda7n</span>
      </a>
