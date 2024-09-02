@@ -2,7 +2,7 @@ import React from "react";
 import { Hero } from "@/app/(root)/_components/hero";
 import { AboutMe } from "@/app/(root)/_components/aboutMe";
 import { Skills } from "@/app/(root)/_components/skills";
-import { SoftSkills } from "@/app/(root)/_components/softSkills";
+import { OtherSkills } from "@/app/(root)/_components/otherSkills";
 import { Projects } from "@/app/(root)/_components/projects";
 import { ContactMe } from "@/app/(root)/_components/contactMe";
 
@@ -12,7 +12,7 @@ export default function Home() {
    <Hero />
    <AboutMe />
    <Skills />
-   <SoftSkills />
+   <OtherSkills />
    <Projects />
    <ContactMe />
    <Hero />

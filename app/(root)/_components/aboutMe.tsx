@@ -20,11 +20,11 @@ export function AboutMe() {
      </h2>
      <p className="max-w-6xl text-sm text-gray-600 sm:text-base lg:text-lg">
       Dedicated Front-end Developer with 1+ years of experience building
-      scalable and user-friendly web applications. Proficient in React,
-      JavaScript, and CSS, with a strong understanding of responsive design
-      principles. Passionate about creating intuitive and visually appealing
-      user interfaces. Seeking a challenging role to contribute my skills and
-      drive innovation in a fast-paced environment.
+      user-friendly web applications. Proficient in React, JavaScript, and CSS,
+      with a strong understanding of responsive design principles. Passionate
+      about creating intuitive and visually appealing user interfaces. Seeking a
+      challenging role to contribute my skills and drive innovation in a
+      fast-paced environment.
      </p>
     </div>
    </div>

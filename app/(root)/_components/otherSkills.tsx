@@ -4,14 +4,16 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useWindowSize } from "react-use";
 
-export function SoftSkills() {
+export function OtherSkills() {
  return (
   <section className="relative flex min-h-screen w-screen items-center overflow-hidden bg-gray-50 py-16 text-gray-800">
    <Background />
    <div className="container relative z-20 flex flex-col items-center gap-5">
     <div className="text-center">
-     <h2 className="text-[clamp(2.5rem,10vw,8rem)] font-bold">Soft Skills</h2>
-     <p className="text-2xl font-bold sm:-mt-5">React ecosystem / Tools</p>
+     <h2 className="text-[clamp(2.5rem,10vw,8rem)] font-bold">Skills</h2>
+     <p className="text-2xl font-bold sm:-mt-5">
+      React Ecosystem / Other Tools
+     </p>
     </div>
     <ul className="grid grid-cols-2 gap-2 font-medium text-gray-50 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
      {SOFT_SKILLS.map((skill) => (
