@@ -19,7 +19,7 @@ export function ProjectContainer({
  return (
   <section ref={target} style={{ minHeight: `${len * 100 + 220}vh` }}>
    <h2 className="my-16 text-center text-[clamp(2.5rem,10vw,8rem)] font-bold">
-    Projects I'v Done
+    Projects I've Done
    </h2>
    <div className="sticky top-0 flex min-h-screen w-screen items-center overflow-hidden">
     <motion.div style={{ x }} className="flex">
