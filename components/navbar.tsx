@@ -198,20 +198,20 @@ function NavigationButton({ toggle }: { toggle: () => void }) {
  return (
   <button
    onClick={() => toggle()}
-   className="pointer-events-auto absolute right-2 top-2 z-50 flex size-14 flex-col items-center justify-center gap-1 rounded-xl bg-gray-50"
+   className="pointer-events-auto absolute right-2 top-2 z-50 flex size-12 flex-col items-center justify-center gap-1 rounded-md bg-gray-50 md:size-14 md:rounded-xl"
   >
-   <div className="flex aspect-square h-8 w-10 flex-col justify-between">
+   <div className="flex h-6 w-8 flex-col justify-between md:h-8 md:w-10">
     <motion.span
      variants={topVariants}
-     className="h-2 w-full origin-top-left rounded-full bg-zinc-950"
+     className="h-1.5 w-full origin-top-left rounded-full bg-zinc-950 md:h-2"
     />
     <motion.span
      variants={centerVariants}
-     className="h-2 w-full rounded-full bg-zinc-950"
+     className="h-1.5 w-full rounded-full bg-zinc-950 md:h-2"
     />
     <motion.span
      variants={bottomVariants}
-     className="h-2 w-full origin-bottom-left rounded-full bg-zinc-950"
+     className="h-1.5 w-full origin-bottom-left rounded-full bg-zinc-950 md:h-2"
     />
    </div>
   </button>
