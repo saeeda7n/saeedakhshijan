@@ -198,7 +198,7 @@ function NavigationButton({ toggle }: { toggle: () => void }) {
  return (
   <button
    onClick={() => toggle()}
-   className="pointer-events-auto absolute right-2 top-2 z-50 flex size-14 flex-col items-center justify-center gap-1 rounded-xl border-2 bg-gray-50"
+   className="pointer-events-auto absolute right-2 top-2 z-50 flex size-14 flex-col items-center justify-center gap-1 rounded-xl bg-gray-50"
   >
    <div className="flex aspect-square h-8 w-10 flex-col justify-between">
     <motion.span
