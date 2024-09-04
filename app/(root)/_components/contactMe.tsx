@@ -85,9 +85,6 @@ function MessageForm() {
    </div>
 
    <div className="flex flex-wrap items-center">
-    <p className="opacity-50">
-     Feel free to send your message or any feedback.
-    </p>
     <button className="ms-auto flex h-10 items-center justify-center gap-2 self-end rounded-md bg-indigo-500 px-5 uppercase">
      Send
      {loading ? (

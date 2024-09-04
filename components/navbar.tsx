@@ -120,8 +120,8 @@ function MenuItem({ item, toggle }: { item: any; toggle: () => void }) {
    variants={menuItemVariants}
    onClick={() => {
     lenis?.start();
-    toggle();
     lenis?.scrollTo(item.pointer);
+    toggle();
    }}
   >
    {item.name.split("").map((word: string, index: number) => (
@@ -236,7 +236,7 @@ const Navbar = () => {
    <motion.nav
     animate={isOpen ? "open" : "closed"}
     dir="ltr"
-    className="absolute inset-y-4 left-4 right-4 max-w-3xl"
+    className="absolute inset-y-2 left-2 right-2 max-w-3xl md:inset-y-4 md:left-4 md:right-4"
    >
     <NavigationButton toggle={toggleOpen} />
     <motion.div
