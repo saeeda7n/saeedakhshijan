@@ -6,7 +6,10 @@ import { useWindowSize } from "react-use";
 
 export function OtherSkills() {
  return (
-  <section className="relative flex min-h-screen w-screen items-center overflow-hidden bg-gray-50 py-16 text-gray-800">
+  <section
+   id="ecosystem"
+   className="relative flex min-h-screen w-screen items-center overflow-hidden bg-gray-50 py-16 text-gray-800"
+  >
    <Background />
    <div className="container relative z-20 flex flex-col items-center gap-5">
     <div className="text-center">

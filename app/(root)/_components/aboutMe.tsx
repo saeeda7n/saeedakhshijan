@@ -28,6 +28,7 @@ export function AboutMe() {
      </p>
     </div>
    </div>
+   <div id="about_me" aria-hidden />
   </section>
  );
 }

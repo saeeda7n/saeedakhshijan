@@ -1,18 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import {
- AtSignIcon,
- Github,
- Instagram,
- Loader,
- Phone,
- Send,
-} from "lucide-react";
+import { Loader, Send } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { sendMessage } from "@/server/actions/sendMessage";
 import { toast } from "sonner";
+import { LINKS } from "@/data/links";
 
 const messageSchema = z.object({
  name: z.string().min(3, { message: "Please provide a name." }),
@@ -90,61 +84,47 @@ function MessageForm() {
     )}
    </div>
 
-   <button className="flex h-10 items-center justify-center gap-2 self-end rounded-md bg-indigo-500 px-5 uppercase">
-    Send
-    {loading ? (
-     <Loader className="size-5 animate-spin" />
-    ) : (
-     <Send className="size-5" />
-    )}
-   </button>
+   <div className="flex flex-wrap items-center">
+    <p className="opacity-50">
+     Feel free to send your message or any feedback.
+    </p>
+    <button className="ms-auto flex h-10 items-center justify-center gap-2 self-end rounded-md bg-indigo-500 px-5 uppercase">
+     Send
+     {loading ? (
+      <Loader className="size-5 animate-spin" />
+     ) : (
+      <Send className="size-5" />
+     )}
+    </button>
+   </div>
   </form>
  );
 }
 
 export function ContactMe() {
  return (
-  <section className="flex min-h-screen py-32">
+  <section id="contact_me" className="flex min-h-screen py-32">
    <div className="container flex min-h-16 flex-col justify-center gap-8">
-    <h2 className="my-16 text-[clamp(2.5rem,10vw,8rem)] font-bold">
-     Get In Touch
-    </h2>
+    <div className="flex flex-col">
+     <h2 className="my-16 text-[clamp(2.5rem,10vw,8rem)] font-bold leading-none">
+      Get In Touch
+     </h2>
+    </div>
     <div className="flex-1">
      <MessageForm />
     </div>
     <div className="flex flex-1 flex-wrap items-center gap-5 gap-y-3 self-end">
-     <a
-      target="_blank"
-      href="tel:+989303929013"
-      className="flex items-center gap-1"
-     >
-      <Phone className="-mb-0.5" />
-      <span>+98 930 392 9013</span>
-     </a>
-     <a
-      target="_blank"
-      href="mailto:sakhshijan@gmail.com"
-      className="flex items-center gap-1"
-     >
-      <AtSignIcon />
-      <span>sakhshijan@gmail.com</span>
-     </a>
-     <a
-      target="_blank"
-      href="https://www.instagram.com/76_saeed_a"
-      className="flex items-center gap-1"
-     >
-      <Instagram />
-      <span>76_saeed_a</span>
-     </a>
-     <a
-      target="_blank"
-      href="https://github.com/saeeda7n/"
-      className="flex items-center gap-1"
-     >
-      <Github />
-      <span>git/saeeda7n</span>
-     </a>
+     {LINKS.map((link) => (
+      <a
+       key={link.name}
+       target="_blank"
+       href={link.url}
+       className="flex items-center gap-1"
+      >
+       {link.icon}
+       <span>{link.name}</span>
+      </a>
+     ))}
     </div>
    </div>
   </section>

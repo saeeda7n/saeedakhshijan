@@ -17,7 +17,11 @@ export function ProjectContainer({
   ["0%", "0%", `${100 / len - 100}%`],
  );
  return (
-  <section ref={target} style={{ minHeight: `${len * 100 + 220}vh` }}>
+  <section
+   id="projects"
+   ref={target}
+   style={{ minHeight: `${len * 100 + 220}vh` }}
+  >
    <h2 className="my-16 text-center text-[clamp(2.5rem,10vw,8rem)] font-bold">
     Projects I've Done
    </h2>

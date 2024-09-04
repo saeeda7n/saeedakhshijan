@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
- scrollbar-width: none;
+    scrollbar-width: none;
 }
 
 @layer base {
@@ -81,5 +81,32 @@
 
 .projects {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 12rem 100%, 12rem 19.35rem, 0% 19.35rem);
+}
 
+
+.hoverText {
+    transition: 0.35s font-weight,
+    0.35s color;
+}
+
+.hoverText:hover {
+    font-weight: 300;
+}
+
+/* To the right */
+.hoverText:hover + .hoverText {
+    font-weight: 500;
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+    font-weight: 800;
+}
+
+/* To the left */
+.hoverText:has(+ .hoverText:hover) {
+    font-weight: 500;
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+    font-weight: 800;
 }

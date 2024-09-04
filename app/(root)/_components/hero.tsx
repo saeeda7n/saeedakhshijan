@@ -90,6 +90,7 @@ export function Hero() {
 
  return (
   <section
+   id="hero"
    className="relative z-50 bg-black selection:bg-zinc-900 selection:text-gray-100"
    style={
     {

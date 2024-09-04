@@ -40,7 +40,7 @@ function SkillCard({ skill, className }: SkillCardProps) {
 export function Skills() {
  return (
   <DroppingCodes>
-   <section className="relative isolate flex min-h-screen py-16">
+   <section id="skills" className="relative isolate flex min-h-screen py-16">
     <div className="container relative flex flex-col items-center justify-center">
      <h2 className="text-[clamp(2.5rem,10vw,8rem)] font-bold">
       Technical Skills
