@@ -52,7 +52,7 @@ const backgroundVariants: Variants = {
   pointerEvents: "none",
   background: "#00000000",
   transition: {
-   delay: 0.5,
+   delay: 1,
   },
  },
  open: {
