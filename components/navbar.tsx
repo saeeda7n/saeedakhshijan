@@ -124,7 +124,7 @@ function MenuItem({ item, toggle }: { item: any; toggle: () => void }) {
     lenis?.scrollTo(item.pointer);
    }}
   >
-   {item.name.split("").map((word, index) => (
+   {item.name.split("").map((word: string, index: number) => (
     <span className="hoverText" key={index}>
      {word}
     </span>
