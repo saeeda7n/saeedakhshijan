@@ -219,8 +219,8 @@ function NavigationButton({ toggle }: { toggle: () => void }) {
 }
 
 const Navbar = () => {
- const lenis = useLenis();
  const [isOpen, toggleOpen] = useCycle(false, true);
+ const lenis = useLenis();
  useEffect(() => {
   if (!lenis) return;
   isOpen ? lenis.stop() : lenis.start();

@@ -99,7 +99,7 @@
 }
 
 .hoverText:hover + .hoverText + .hoverText {
-    font-weight: 800;
+    font-weight: 700;
 }
 
 /* To the left */
@@ -108,5 +108,5 @@
 }
 
 .hoverText:has(+ .hoverText + .hoverText:hover) {
-    font-weight: 800;
+    font-weight: 700;
 }
