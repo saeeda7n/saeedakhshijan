@@ -39,7 +39,9 @@ const Page = () => {
       className="flex shrink-0 gap-8 px-4 text-3xl font-black"
      >
       {SKILLS.map((skill) => (
-       <div className="shrink-0 opacity-50">{skill.name}</div>
+       <div key={skill.name} className="shrink-0 opacity-50">
+        {skill.name}
+       </div>
       ))}
      </motion.div>
      <motion.div
@@ -48,7 +50,9 @@ const Page = () => {
       className="flex shrink-0 gap-8 px-4 text-3xl font-black"
      >
       {SKILLS.map((skill) => (
-       <div className="shrink-0 opacity-50">{skill.name}</div>
+       <div key={skill.name} className="shrink-0 opacity-50">
+        {skill.name}
+       </div>
       ))}
      </motion.div>
     </div>

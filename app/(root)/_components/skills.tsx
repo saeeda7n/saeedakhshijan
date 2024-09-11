@@ -47,7 +47,7 @@ export function Skills() {
      </h2>
      <div className="grid w-full">
       {SKILLS.map((skill) => (
-       <SkillCard skill={skill} />
+       <SkillCard skill={skill} key={skill.name} />
       ))}
      </div>
     </div>
