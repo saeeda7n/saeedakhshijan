@@ -1,6 +1,6 @@
 {
-  "name": "My Awesome PWA app",
-  "short_name": "PWA App",
+  "name": "Saeed Akhshijan",
+  "short_name": "SA",
   "icons": [
 
     {
@@ -9,9 +9,12 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
+  "theme_color": "#000",
+  "background_color": "#000",
   "start_url": "/",
   "display": "standalone",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "version": "1.0.1",
+  "license": "MIT",
+  "keywords": ["Portfolio", "Saeed" , "Akhshija"]
 }
