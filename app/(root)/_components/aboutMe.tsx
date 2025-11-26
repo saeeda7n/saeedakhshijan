@@ -19,7 +19,7 @@ export function AboutMe() {
       About me
      </h2>
      <p className="max-w-6xl text-sm text-gray-600 sm:text-base lg:text-lg">
-      Dedicated Front-end Developer with 1+ years of experience building
+      Dedicated Front-end Developer with 3+ years of experience building
       user-friendly web applications. Proficient in React, JavaScript, and
       TailwindCss, with a strong understanding of responsive design principles.
       Passionate about creating intuitive and visually appealing user
