@@ -12,8 +12,8 @@ export const LINKS = [
   icon: <AtSignIcon />,
  },
  {
-  name: "76_saeed_a",
-  url: "https://www.instagram.com/76_saeed_a",
+  name: "saeed_a7n",
+  url: "https://www.instagram.com/saeed_a7n",
   icon: <Instagram />,
  },
  {
