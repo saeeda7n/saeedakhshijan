@@ -43,8 +43,8 @@ export const PROJECTS: ProjectProps[] = [
   {
     name: "DMovie",
     body: "DMovie is a simple movie-browsing web application I built in my free time to learn and experiment with new technologies. It’s developed with Next.js, and uses Framer Motion for smooth, polished UI animations. The app retrieves movie data from external APIs and validates it with Zod to keep everything type-safe and predictable. Global state is managed with Zustand, giving the project a clean and lightweight architecture. Overall, DMovie is a personal learning project focused on exploring modern frontend tools while creating a clean, responsive interface for discovering movies.",
-    mobileScreen: "/images/projects/apple-tv-mobile.png",
-    desktopScreen: "/images/projects/apple-tv-desktop.png",
+    mobileScreen: "/images/projects/dmovie-mobile.png",
+    desktopScreen: "/images/projects/dmovie-desktop.png",
     links: [
       {
         name: "GIT",
